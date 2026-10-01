@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH Plugin](https://img.shields.io/badge/DSH-plugin-4d6bfe.svg)](https://github.com/topics/dsh-plugin)
 [![Node](https://img.shields.io/badge/node-%E2%89%A520.11-5FA04E.svg)](package.json)
-[![Tests](https://img.shields.io/badge/tests-21%20passed-2DD4BF.svg)](test/)
+[![Tests](https://img.shields.io/badge/tests-27%20passed-2DD4BF.svg)](test/)
 [![Catalog](https://img.shields.io/badge/catalog-45%20domains%20%C2%B7%201363%20cases-22D3EE.svg)](docs/CATALOG-AUTHORING.md)
 
 </div>
@@ -85,7 +85,7 @@ Agent 深度分析其余 → 出可勾选报告 → 协商修复范围 → 复�
 | **修复范围协商** | `qf_fixplan` 生成修复波次与交接单，支持全部修复 / 仅 P0-P1 / 指定编号 / 排除编号 |
 | **零运行时依赖** | 只用 Node 内置模块，无构建步骤，安装时不执行任何脚本；不会因为宿主包版本或软链方式变化而加载失败 |
 | **只读侦察 + 收窄执行面** | 侦察只读；`qf_exec` 只跑预设白名单命令；`qf_probe` 只允许回环地址 |
-| **开源工程化** | CI（Node 20/22）、21 项测试、目录契约校验、预设映射校验、编写规范、报告格式说明 |
+| **开源工程化** | CI（Node 20/22）、27 项测试、目录契约校验、预设映射校验、编写规范、报告格式说明 |
 
 ---
 
@@ -120,7 +120,7 @@ dsh --profile <profile> --dump-config | grep -A3 qualityforge
 ```bash
 git clone https://github.com/lpeixin/dsh-qualityforge.git
 cd dsh-qualityforge
-node --test          # 21 项测试
+node --test          # 27 项测试
 npm run validate     # 目录契约 + 预设映射校验
 ```
 
@@ -552,7 +552,7 @@ Code review 依赖模型的临场发挥，覆盖度不可复现、不可比较�
 git clone https://github.com/lpeixin/dsh-qualityforge.git
 cd dsh-qualityforge
 
-node --test                              # 21 项测试（单元 + 端到端）
+node --test                              # 27 项测试（目录 + 侦察 + 端到端）
 node --test --experimental-test-coverage
 npm run validate                         # 目录契约 + 预设映射校验
 npm run catalog:stats                    # 目录规模与各深度展开条数
@@ -591,7 +591,7 @@ docs/                   目录编写规范、报告格式说明、报告示例
 | DSH | 支持 Cordis 插件与 bundle patch 的版本（`dsh.bundle.patch` 契约） |
 | Node.js | ≥ 20.11（开发与 CI 验证 20.x / 22.x） |
 | 平台 | macOS / Linux / Windows（仅使用 Node 内置能力与 `spawn`，无原生依赖） |
-| 安装体积 | 约 300 KB（不含被审计项目的审计产物） |
+| 安装体积 | npm 包约 215 KB（压缩）／约 726 KB（解包），不含被审计项目的审计产物 |
 
 插件**不 import** `@deepseek-ai/*` 或任何第三方包，因此对宿主包版本不敏感；
 如果某个组合缺少 `skills` 服务，插件会自动跳过技能注册而工具仍然可用。

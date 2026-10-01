@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="QualityForge — systematic QA for finished projects, a DeepSeek Harness plugin">
+  <title>QualityForge</title>
+  <desc>QualityForge: systematic, evidence-backed QA orchestration for DeepSeek Harness — 45 test domains, 1363 cases, a per-item checkable report with P0-P3 severity. This file is the source for assets/social-preview.png, the repository social preview image.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060A12"/>
+      <stop offset="55%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#101B2E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1B2740" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <pattern id="gridFine" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#16223A" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+    <filter id="soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#gridFine)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <ellipse cx="300" cy="340" rx="420" ry="360" fill="url(#glow)"/>
+  <ellipse cx="1080" cy="120" rx="360" ry="300" fill="url(#glow2)"/>
+  <rect x="0" y="0" width="1280" height="3" fill="url(#beam)"/>
+  <rect x="0" y="637" width="1280" height="3" fill="url(#beam)"/>
+
+  <!-- ===================== quality gate ===================== -->
+  <g transform="translate(290 336)">
+    <!-- domain ticks feeding the gate -->
+    <g fill="#22D3EE">
+      <rect x="-232" y="-46" width="34" height="6" rx="3" opacity="0.5"/>
+      <rect x="-232" y="-22" width="44" height="6" rx="3" opacity="0.32"/>
+      <rect x="-232" y="2" width="26" height="6" rx="3" opacity="0.45"/>
+      <rect x="-232" y="26" width="40" height="6" rx="3" opacity="0.28"/>
+      <rect x="-232" y="50" width="30" height="6" rx="3" opacity="0.38"/>
+    </g>
+    <g fill="#3B82F6">
+      <rect x="200" y="-16" width="40" height="7" rx="3.5" opacity="0.7"/>
+      <rect x="200" y="8" width="24" height="7" rx="3.5" opacity="0.4"/>
+    </g>
+    <path d="M-186 0 H186" stroke="url(#beam)" stroke-width="2.5" opacity="0.55"/>
+    <!-- concentric hex rings -->
+    <g fill="none" stroke="url(#accent)" stroke-linejoin="round">
+      <path d="M0 -186 L161 -93 L161 93 L0 186 L-161 93 L-161 -93 Z" stroke-width="2" stroke-opacity="0.26"/>
+      <path d="M0 -142 L123 -71 L123 71 L0 142 L-123 71 L-123 -71 Z" stroke-width="2.4" stroke-opacity="0.46"/>
+      <path d="M0 -98 L85 -49 L85 49 L0 98 L-85 49 L-85 -49 Z" stroke-width="3" stroke-opacity="0.8"/>
+    </g>
+    <!-- verdict mark -->
+    <g stroke="#E6F7FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#soft)" opacity="0.35">
+      <path d="M-42 4 L-13 33 L48 -36"/>
+    </g>
+    <g stroke="#8DE9F8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-42 4 L-13 33 L48 -36"/>
+    </g>
+  </g>
+
+  <!-- ===================== wordmark & copy ===================== -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace">
+    <text x="576" y="150" font-size="17" letter-spacing="4.4" fill="#5FB6CE">DEEPSEEK HARNESS PLUGIN · CORDIS BUNDLE</text>
+    <text x="572" y="252" font-size="86" font-weight="700" letter-spacing="0.5" fill="#EAF2FF">Quality<tspan fill="#5AD1E8">Forge</tspan></text>
+    <text x="576" y="304" font-size="31" letter-spacing="0.4" fill="#9CB0CC">Systematic QA for finished projects</text>
+
+    <line x1="576" y1="342" x2="1196" y2="342" stroke="#1E3350" stroke-width="2"/>
+
+    <!-- checklist rows: the checkable report, as the product's core motif -->
+    <g font-size="23" letter-spacing="0.2">
+      <g fill="none" stroke="#2DD4BF" stroke-width="2.6">
+        <rect x="576" y="374" width="26" height="26" rx="6"/>
+        <rect x="576" y="422" width="26" height="26" rx="6"/>
+        <rect x="576" y="470" width="26" height="26" rx="6"/>
+      </g>
+      <g stroke="#2DD4BF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M583 387 l5.5 5.5 L596 378"/>
+        <path d="M583 435 l5.5 5.5 L596 426"/>
+        <path d="M583 483 l5.5 5.5 L596 474"/>
+      </g>
+      <g fill="#B7C7DC">
+        <text x="624" y="395">45 domains · 290 methods · 1363 cases</text>
+        <text x="624" y="443">Evidence-backed automated runs</text>
+        <text x="624" y="491">P0–P3 severity · per-item checklist</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- severity chips -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" letter-spacing="1.6">
+    <rect x="576" y="536" width="146" height="38" rx="6" fill="#2A1214" stroke="#7F1D1D"/>
+    <circle cx="598" cy="555" r="6" fill="#F87171"/>
+    <text x="614" y="561" fill="#FCA5A5">P0 BLOCKER</text>
+
+    <rect x="736" y="536" width="158" height="38" rx="6" fill="#2A1B10" stroke="#7C3F12"/>
+    <circle cx="758" cy="555" r="6" fill="#FB923C"/>
+    <text x="774" y="561" fill="#FDBA74">P1 CRITICAL</text>
+
+    <rect x="908" y="536" width="140" height="38" rx="6" fill="#2A2410" stroke="#78621A"/>
+    <circle cx="930" cy="555" r="6" fill="#FACC15"/>
+    <text x="946" y="561" fill="#FDE68A">P2 MAJOR</text>
+
+    <rect x="1062" y="536" width="136" height="38" rx="6" fill="#0F2530" stroke="#1F5A6B"/>
+    <circle cx="1084" cy="555" r="6" fill="#38BDF8"/>
+    <text x="1100" y="561" fill="#93C5FD">P3 MINOR</text>
+  </g>
+
+  <!-- footer: the negotiation loop -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" letter-spacing="0.6">
+    <text x="576" y="612" fill="#5F7C9E">scan → plan → execute → report → fix waves → re-test</text>
+  </g>
+</svg>

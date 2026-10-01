@@ -22,7 +22,8 @@
   },
   "files": [
     "lib",
-    "assets",
+    "assets/icon.svg",
+    "assets/banner.svg",
     "docs",
     "locale",
     "scripts",

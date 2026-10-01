@@ -6,6 +6,22 @@
 
 ## [Unreleased]
 
+### 新增
+
+- `assets/social-preview.svg` 与 `assets/social-preview.png`（1280×640、405 KB）：
+  GitHub **Social preview** 源文件。topic 列表卡片（如 <https://github.com/topics/dsh-plugin>）
+  顶部的横幅图用的是社交预览图，而不是 README 里的 banner；需在
+  Settings → General → Social preview 上传，GitHub 没有提供公开 API。
+- `docs/RELEASE-CHECKLIST.md`：发布检查单——仓库设置（About/topics、社交预览图、分支保护）、
+  打 tag 与 Release、npm 发布，以及"README banner ≠ topic 卡片横幅"等常见误解。
+
+### 修复
+
+- `package.json` 的 `files` 白名单改为显式列出 `assets/icon.svg` 与 `assets/banner.svg`：
+  图标是 DSH 插件管理器要读取的资源，banner 是 npm 页面渲染 README 所需；
+  405 KB 的社交预览图不进 npm 包（包体积从 615 KB 回到 215 KB）。
+- 文档中的测试数量（21 → 27）与安装体积数字更新为与实际一致。
+
 ### 计划中
 
 - `qf_diff`：对比两次审计结果，输出"新引入 / 已修复 / 仍存在"三类差异，用于发布前回归。
@@ -36,5 +52,5 @@
   支持全部修复、仅 P0/P1、指定编号、排除编号等范围表达。
 - **方法论技能**：内嵌 `qualityforge-audit` 技能，说明工作流、判定纪律与反模式。
 - **零运行时依赖**：只使用 Node 内置模块，无构建步骤，不 import 任何外部包。
-- **开源工程化**：CI（Node 20/22 + 目录与映射校验）、测试套件（21 项）、
+- **开源工程化**：CI（Node 20/22 + 目录与映射校验）、测试套件（27 项，含侦察行为测试）、
   目录编写规范、报告格式说明、贡献指南、安全政策与行为准则。

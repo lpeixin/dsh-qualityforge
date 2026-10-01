@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![DSH Plugin](https://img.shields.io/badge/DSH-plugin-4d6bfe.svg)](https://github.com/topics/dsh-plugin)
 [![Node](https://img.shields.io/badge/node-%E2%89%A520.11-5FA04E.svg)](package.json)
-[![Tests](https://img.shields.io/badge/tests-21%20passed-2DD4BF.svg)](test/)
+[![Tests](https://img.shields.io/badge/tests-27%20passed-2DD4BF.svg)](test/)
 [![Catalog](https://img.shields.io/badge/catalog-45%20domains%20%C2%B7%201363%20cases-22D3EE.svg)](docs/CATALOG-AUTHORING.md)
 
 </div>
@@ -361,7 +361,7 @@ separately.
 git clone https://github.com/lpeixin/dsh-qualityforge.git
 cd dsh-qualityforge
 
-node --test                       # 21 tests (unit + end-to-end)
+node --test                       # 27 tests (catalog + recon + end-to-end)
 npm run validate                  # catalog contract + preset-mapping checks
 npm run catalog:stats
 ```
@@ -386,7 +386,7 @@ follow [docs/CATALOG-AUTHORING.md](docs/CATALOG-AUTHORING.md), then run `npm run
 | DSH | Any version supporting Cordis plugins and the `dsh.bundle.patch` contract |
 | Node.js | ≥ 20.11 (CI runs 20.x and 22.x) |
 | Platform | macOS / Linux / Windows (built-ins and `spawn` only, no native modules) |
-| Install size | ~300 KB (excluding audit artifacts of audited projects) |
+| Install size | npm tarball ~215 KB (~726 KB unpacked), excluding audit artifacts of audited projects |
 
 If a composition lacks the `skills` service, skill registration is skipped and the tools still work.
 

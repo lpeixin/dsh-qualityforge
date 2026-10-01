@@ -17,6 +17,10 @@ coverage/
 .nyc_output/
 *.lcov
 
+# Packaging artifacts (`npm pack` / `npm publish` produce these locally)
+*.tgz
+*.tar.gz
+
 # ---- QualityForge audit artifacts --------------------------------------------
 # An audit is per-machine evidence: the report is meant to be read, ticked and
 # re-generated, not committed by default. Un-ignore the report (or point
@@ -38,6 +42,7 @@ desktop.ini
 *.iml
 .vscode/*
 !.vscode/extensions.json
+.history/
 *.swp
 *.swo
 *~
@@ -64,12 +69,19 @@ __pycache__/
 .venv/
 venv/
 
+# ---- Patch / merge leftovers -------------------------------------------------
+*.orig
+*.rej
+*.bak
+
 # ---- Test / debug scratch ----------------------------------------------------
 *.log
 logs/
 tmp/
 temp/
 .cache/
+# Atomic writes use `<target>.<pid>.<ts>.tmp`; a crashed run can leave one behind
+*.tmp
 playwright-report/
 test-results/
 allure-results/

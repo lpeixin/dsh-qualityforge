@@ -73,7 +73,8 @@ npm run validate     # 目录与映射必须通过
 
 - 提交信息遵循 [Conventional Commits](https://www.conventionalcommits.org/)（`feat:` / `fix:` / `docs:` …）；
 - 变更记录写进 `CHANGELOG.md` 的 `Unreleased` 段；
-- 涉及安全问题的改动，请阅读 [`SECURITY.md`](SECURITY.md) 后按私下渠道报告。
+- 涉及安全问题的改动，请阅读 [`SECURITY.md`](SECURITY.md) 后按私下渠道报告；
+- 要发布新版本（打 tag、上传社交预览图、发布 npm 包）时，按 [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md) 逐项执行。
 
 ## 行为准则
 
