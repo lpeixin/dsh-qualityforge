@@ -15,6 +15,12 @@
 - `docs/RELEASE-CHECKLIST.md`：发布检查单——仓库设置（About/topics、社交预览图、分支保护）、
   打 tag 与 Release、npm 发布，以及"README banner ≠ topic 卡片横幅"等常见误解。
 
+### 变更
+
+- **README 默认语言改为英文**：`README.md` 现在是英文版（GitHub 首页与 npm 页面默认呈现），
+  中文版移到 [`README.zh-CN.md`](README.zh-CN.md)，两份文件顶部都有语言切换入口。
+  `package.json` 的 `files` 白名单同步为 `README.md` + `README.zh-CN.md`。
+
 ### 修复
 
 - `package.json` 的 `files` 白名单改为显式列出 `assets/icon.svg` 与 `assets/banner.svg`：
