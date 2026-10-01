@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="QualityForge — systematic QA for finished projects, a DeepSeek Harness plugin">
+  <title>QualityForge</title>
+  <desc>QualityForge: systematic, evidence-backed QA orchestration for DeepSeek Harness — 45 test domains, 1363 cases, a per-item checkable report with P0-P3 severity.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="55%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#0E1729"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2740" stroke-width="1" stroke-opacity="0.55"/>
+    </pattern>
+    <pattern id="gridFine" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#16223A" stroke-width="1" stroke-opacity="0.35"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="400" fill="url(#bg)"/>
+  <rect width="1280" height="400" fill="url(#gridFine)"/>
+  <rect width="1280" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1280" height="400" fill="url(#glow)" opacity="0.55"/>
+  <rect x="0" y="398" width="1280" height="2" fill="url(#beam)"/>
+
+  <!-- ===================== forge gate (left) ===================== -->
+  <g transform="translate(196 200)">
+    <circle cx="0" cy="0" r="132" fill="url(#glow)" opacity="0.5"/>
+    <!-- concentric hex rings: the quality gate -->
+    <g fill="none" stroke="url(#accent)" stroke-linejoin="round">
+      <path d="M0 -118 L102 -59 L102 59 L0 118 L-102 59 L-102 -59 Z" stroke-width="1.4" stroke-opacity="0.28"/>
+      <path d="M0 -90 L78 -45 L78 45 L0 90 L-78 45 L-78 -45 Z" stroke-width="1.6" stroke-opacity="0.45"/>
+      <path d="M0 -62 L54 -31 L54 31 L0 62 L-54 31 L-54 -31 Z" stroke-width="2" stroke-opacity="0.75"/>
+    </g>
+    <!-- pass-through beam -->
+    <path d="M-160 0 H160" stroke="url(#beam)" stroke-width="2" opacity="0.5"/>
+    <!-- verdict mark -->
+    <g stroke="#E6F7FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#soft)" opacity="0.35">
+      <path d="M-26 2 L-8 20 L30 -22"/>
+    </g>
+    <g stroke="#7DE3F4" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-26 2 L-8 20 L30 -22"/>
+    </g>
+    <!-- gate ticks: domains entering, verdict leaving -->
+    <g fill="#22D3EE">
+      <rect x="-170" y="-30" width="26" height="4" rx="2" opacity="0.55"/>
+      <rect x="-170" y="-12" width="34" height="4" rx="2" opacity="0.35"/>
+      <rect x="-170" y="6" width="20" height="4" rx="2" opacity="0.5"/>
+      <rect x="-170" y="24" width="30" height="4" rx="2" opacity="0.3"/>
+    </g>
+    <g fill="#3B82F6">
+      <rect x="146" y="-10" width="30" height="5" rx="2.5" opacity="0.75"/>
+      <rect x="146" y="6" width="18" height="5" rx="2.5" opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- ===================== wordmark ===================== -->
+  <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace">
+    <text x="392" y="152" font-size="54" font-weight="700" letter-spacing="0.5" fill="#EAF2FF">Quality<tspan fill="#5AD1E8">Forge</tspan></text>
+    <text x="394" y="190" font-size="18" letter-spacing="0.6" fill="#94A7C4">Systematic QA for finished projects</text>
+
+    <!-- tag row -->
+    <g font-size="12.5" letter-spacing="1.4">
+      <rect x="392" y="210" width="140" height="26" rx="5" fill="#0E1B2E" stroke="#22405F"/>
+      <text x="408" y="227" fill="#7FD8EA">DSH PLUGIN</text>
+      <rect x="544" y="210" width="176" height="26" rx="5" fill="#0E1B2E" stroke="#22405F"/>
+      <text x="560" y="227" fill="#9DB4D0">CORDIS BUNDLE</text>
+      <rect x="732" y="210" width="150" height="26" rx="5" fill="#0E1B2E" stroke="#22405F"/>
+      <text x="748" y="227" fill="#9DB4D0">NO RUNTIME DEPS</text>
+    </g>
+
+    <!-- metric strip -->
+    <g font-size="13" letter-spacing="0.4">
+      <text x="392" y="288" fill="#8FA6C4">45 test domains</text>
+      <text x="517" y="288" fill="#33455F">·</text>
+      <text x="532" y="288" fill="#8FA6C4">290 methods</text>
+      <text x="637" y="288" fill="#33455F">·</text>
+      <text x="652" y="288" fill="#8FA6C4">1363 cases</text>
+      <text x="747" y="288" fill="#33455F">·</text>
+      <text x="762" y="288" fill="#8FA6C4">checkable report</text>
+    </g>
+
+    <!-- severity chips -->
+    <g font-size="12" letter-spacing="1.2">
+      <rect x="392" y="308" width="104" height="26" rx="4" fill="#2A1214" stroke="#7F1D1D"/>
+      <circle cx="408" cy="321" r="4" fill="#F87171"/>
+      <text x="420" y="325" fill="#FCA5A5">P0 BLOCKER</text>
+
+      <rect x="506" y="308" width="112" height="26" rx="4" fill="#2A1B10" stroke="#7C3F12"/>
+      <circle cx="522" cy="321" r="4" fill="#FB923C"/>
+      <text x="534" y="325" fill="#FDBA74">P1 CRITICAL</text>
+
+      <rect x="628" y="308" width="100" height="26" rx="4" fill="#2A2410" stroke="#78621A"/>
+      <circle cx="644" cy="321" r="4" fill="#FACC15"/>
+      <text x="656" y="325" fill="#FDE68A">P2 MAJOR</text>
+
+      <rect x="738" y="308" width="96" height="26" rx="4" fill="#0F2530" stroke="#1F5A6B" stroke-opacity="0.9"/>
+      <circle cx="754" cy="321" r="4" fill="#38BDF8"/>
+      <text x="766" y="325" fill="#93C5FD">P3 MINOR</text>
+    </g>
+  </g>
+
+  <!-- ===================== report panel (right) ===================== -->
+  <g transform="translate(958 84)">
+    <rect x="0" y="0" width="300" height="232" rx="10" fill="#0A1524" stroke="#1E3350"/>
+    <rect x="0" y="0" width="300" height="34" rx="10" fill="#0E1D31"/>
+    <rect x="0" y="24" width="300" height="10" fill="#0E1D31"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" letter-spacing="0.8">
+      <text x="14" y="22" fill="#7FD8EA">QUALITYFORGE-REPORT.md</text>
+      <circle cx="272" cy="17" r="3.5" fill="#1F3A57"/>
+      <circle cx="284" cy="17" r="3.5" fill="#1F3A57"/>
+    </g>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+      <!-- checked rows -->
+      <g fill="#2DD4BF">
+        <rect x="14" y="48" width="12" height="12" rx="3" fill="none" stroke="#2DD4BF" stroke-width="1.4"/>
+        <path d="M17 54 l2.6 2.6 L23.4 51" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="14" y="76" width="12" height="12" rx="3" fill="none" stroke="#2DD4BF" stroke-width="1.4"/>
+        <path d="M17 82 l2.6 2.6 L23.4 79" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="14" y="132" width="12" height="12" rx="3" fill="none" stroke="#2DD4BF" stroke-width="1.4"/>
+        <path d="M17 138 l2.6 2.6 L23.4 135" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g fill="#22405F">
+        <rect x="14" y="104" width="12" height="12" rx="3" fill="none" stroke="#3A5B7E" stroke-width="1.4"/>
+        <rect x="14" y="160" width="12" height="12" rx="3" fill="none" stroke="#3A5B7E" stroke-width="1.4"/>
+        <rect x="14" y="188" width="12" height="12" rx="3" fill="none" stroke="#3A5B7E" stroke-width="1.4"/>
+      </g>
+
+      <!-- row text placeholders -->
+      <g fill="#3C5B7C">
+        <rect x="38" y="50" width="150" height="7" rx="3.5"/>
+        <rect x="38" y="78" width="196" height="7" rx="3.5"/>
+        <rect x="38" y="134" width="168" height="7" rx="3.5"/>
+        <rect x="38" y="162" width="132" height="7" rx="3.5"/>
+        <rect x="38" y="190" width="178" height="7" rx="3.5"/>
+      </g>
+      <!-- defect rows -->
+      <g>
+        <rect x="38" y="106" width="212" height="7" rx="3.5" fill="#7F2A2A"/>
+        <rect x="256" y="102" width="30" height="15" rx="3" fill="#2A1214" stroke="#7F1D1D"/>
+        <text x="262" y="113.5" fill="#FCA5A5" font-size="9.5">P0</text>
+
+        <rect x="38" y="162" width="152" height="7" rx="3.5" fill="#7A4A18"/>
+        <rect x="256" y="158" width="30" height="15" rx="3" fill="#2A1B10" stroke="#7C3F12"/>
+        <text x="262" y="169.5" fill="#FDBA74" font-size="9.5">P1</text>
+
+        <rect x="38" y="190" width="120" height="7" rx="3.5" fill="#6B5A18"/>
+        <rect x="256" y="186" width="30" height="15" rx="3" fill="#2A2410" stroke="#78621A"/>
+        <text x="262" y="197.5" fill="#FDE68A" font-size="9.5">P2</text>
+      </g>
+    </g>
+    <!-- footer: fix waves -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="0.6">
+      <line x1="14" y1="214" x2="286" y2="214" stroke="#1B2E47" stroke-width="1"/>
+      <text x="14" y="226" fill="#5F7C9E">wave 1 · p0 清零 → wave 2 · p1 收敛</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞（私密渠道）
+    url: https://github.com/lpeixin/dsh-qualityforge/security/advisories/new
+    about: 请勿用公开 issue 报告安全边界问题，使用私密披露渠道。
+  - name: 使用问题与讨论
+    url: https://github.com/lpeixin/dsh-qualityforge/discussions
+    about: 安装、使用、审计策略等问题请在这里讨论。

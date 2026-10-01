@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="QualityForge">
+  <title>QualityForge</title>
+  <desc>QualityForge plugin icon: a hexagonal quality gate with a passing verdict and a checkable report.</desc>
+
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1120"/>
+      <stop offset="100%" stop-color="#101C2E"/>
+    </linearGradient>
+    <linearGradient id="iaccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <pattern id="igrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#1B2740" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <filter id="iglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="46" fill="url(#ibg)"/>
+  <rect width="256" height="256" rx="46" fill="url(#igrid)"/>
+  <rect x="1" y="1" width="254" height="254" rx="45" fill="none" stroke="#1E3350" stroke-width="2"/>
+
+  <!-- quality gate -->
+  <g transform="translate(112 108)">
+    <path d="M0 -74 L64 -37 L64 37 L0 74 L-64 37 L-64 -37 Z" fill="none" stroke="url(#iaccent)" stroke-width="2" stroke-opacity="0.35" stroke-linejoin="round"/>
+    <path d="M0 -54 L47 -27 L47 27 L0 54 L-47 27 L-47 -27 Z" fill="none" stroke="url(#iaccent)" stroke-width="2.4" stroke-opacity="0.8" stroke-linejoin="round"/>
+    <g stroke="#7DE3F4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#iglow)" opacity="0.4">
+      <path d="M-19 2 L-6 15 L21 -16"/>
+    </g>
+    <g stroke="#9BEDFB" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-19 2 L-6 15 L21 -16"/>
+    </g>
+  </g>
+
+  <!-- checkable report rows -->
+  <g transform="translate(30 196)">
+    <g fill="none" stroke="#2DD4BF" stroke-width="1.6">
+      <rect x="0" y="0" width="12" height="12" rx="3"/>
+      <rect x="0" y="18" width="12" height="12" rx="3"/>
+    </g>
+    <g fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 6 l2.6 2.6 L9.6 3.4"/>
+      <path d="M3 24 l2.6 2.6 L9.6 21.4"/>
+    </g>
+    <g fill="none" stroke="#4A6584" stroke-width="1.6">
+      <rect x="0" y="36" width="12" height="12" rx="3"/>
+    </g>
+    <g fill="#3C5B7C">
+      <rect x="22" y="3" width="102" height="6" rx="3"/>
+      <rect x="22" y="21" width="76" height="6" rx="3"/>
+      <rect x="22" y="39" width="90" height="6" rx="3"/>
+    </g>
+    <rect x="132" y="0" width="26" height="13" rx="3" fill="#2A1214" stroke="#7F1D1D" stroke-width="1"/>
+    <text x="137" y="10" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8.5" fill="#FCA5A5">P0</text>
+  </g>
+</svg>

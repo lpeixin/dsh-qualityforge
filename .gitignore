@@ -1,0 +1,76 @@
+# ---- Node / package managers -------------------------------------------------
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+*.tsbuildinfo
+
+# ---- Build output ------------------------------------------------------------
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+*.lcov
+
+# ---- QualityForge audit artifacts --------------------------------------------
+# An audit is per-machine evidence: the report is meant to be read, ticked and
+# re-generated, not committed by default. Un-ignore the report (or point
+# qf_report at another path) when a signed QA report is a release artifact.
+.qualityforge/
+
+# ---- OS metadata -------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- Editors / IDEs ----------------------------------------------------------
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# ---- Local secrets and environment -------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+
+# ---- Tooling caches ----------------------------------------------------------
+.eslintcache
+.stylelintcache
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.tox/
+.venv/
+venv/
+
+# ---- Test / debug scratch ----------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+.cache/
+playwright-report/
+test-results/
+allure-results/
+junit.xml

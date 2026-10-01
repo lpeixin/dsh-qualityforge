@@ -1,0 +1,15 @@
+# Bundle patch for dsh-qualityforge.
+#
+# One insert row over the profile root. The row is addressed by id, so a user's
+# own cordis.patch.yml can re-configure or disable it later:
+#
+#   - id: qualityforge
+#     disabled: true
+#
+# The plugin imports nothing outside Node built-ins and ships no dependencies,
+# so it needs no dependency row and cannot break composition when unrelated
+# packages are missing.
+
+- insert:
+    - id: qualityforge
+      name: 'dsh-qualityforge'

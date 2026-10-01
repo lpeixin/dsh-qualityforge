@@ -1,0 +1,64 @@
+{
+  "name": "dsh-qualityforge",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness bundle: systematic, audit-ready QA orchestration for finished projects — exhaustive test-method catalog, evidence-backed execution, and a per-item checkable report with P0–P3 severity for negotiating fix scope with the Harness.",
+  "type": "module",
+  "license": "MIT",
+  "author": "lpeixin",
+  "homepage": "https://github.com/lpeixin/dsh-qualityforge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpeixin/dsh-qualityforge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lpeixin/dsh-qualityforge/issues"
+  },
+  "icon": "assets/icon.svg",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "docs",
+    "locale",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "test": "node --test",
+    "coverage": "node --test --experimental-test-coverage",
+    "validate": "node scripts/validate-catalog.mjs && node scripts/check-mapping.mjs",
+    "catalog:stats": "node scripts/validate-catalog.mjs --stats",
+    "mapping:check": "node scripts/check-mapping.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "qa",
+    "quality-assurance",
+    "testing",
+    "test-plan",
+    "audit",
+    "code-review",
+    "report"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

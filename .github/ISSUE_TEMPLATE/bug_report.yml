@@ -1,0 +1,63 @@
+name: Bug 报告
+description: 报告一个可复现的问题（插件行为、报告内容或测试项判定）
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。QualityForge 的结论要能被信任，所以**能复现**是最重要的信息。
+        如果问题涉及安全边界（越权读写、任意命令执行、非回环网络请求），请不要在这里提交，
+        改用 [SECURITY.md](../blob/main/SECURITY.md) 中的私密渠道。
+  - type: input
+    id: version
+    attributes:
+      label: 插件版本
+      description: 见 package.json 的 version 字段，或 plugin_manager 列表中的版本
+      placeholder: '0.1.0'
+    validations:
+      required: true
+  - type: input
+    id: dsh
+    attributes:
+      label: DSH 版本与运行环境
+      placeholder: 'DSH x.y.z / macOS 15 / Node 22.22'
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型
+      options:
+        - 插件加载或注册失败
+        - 某个工具报错或入参校验异常
+        - 报告内容不符（判定、优先级、勾选回写、渲染）
+        - 测试方法目录问题（缺方法、判定不可执行、分类错误）
+        - 自动执行/回填问题（预设命令识别、结果回填）
+        - 其它
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请写出实际调用的工具与参数（JSON 更好），以及被审计项目的类型
+      placeholder: |
+        1. 对被审计项目执行 qf_scan
+        2. 执行 qf_plan depth=smoke
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果 vs 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 报错信息、`.qualityforge/audit.json` 相关片段（注意先脱敏）、截图
+    validations:
+      required: false

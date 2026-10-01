@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Check syntax of every module
+        run: |
+          for file in lib/*.js lib/catalog/*.js scripts/*.mjs test/*.js; do
+            node --check "$file"
+          done
+      - name: Unit and end-to-end tests (with coverage)
+        run: node --test --experimental-test-coverage
+      - name: Validate test-method catalog and preset mapping
+        run: npm run validate
+      - name: Assert the bundle manifest is installable
+        run: |
+          node -e "
+          const pkg = require('./package.json');
+          const assert = require('node:assert/strict');
+          assert.equal(pkg.type, 'module');
+          assert.ok(pkg.dsh?.bundle?.patch, 'dsh.bundle.patch is required for installability');
+          assert.ok(pkg.exports['.'], 'the plugin entry must be exported');
+          assert.deepEqual(pkg.dependencies ?? {}, {}, 'the plugin must stay dependency-free');
+          console.log('manifest OK:', pkg.name, pkg.version);
+          "
+      - name: Assert the cordis patch row is well formed
+        run: |
+          node -e "
+          const fs = require('node:fs');
+          const text = fs.readFileSync('cordis.patch.yml', 'utf8');
+          if (!/^-\s*insert:/m.test(text)) throw new Error('cordis.patch.yml must contain a top-level insert row');
+          if (!/id:\s*qualityforge/.test(text)) throw new Error('the inserted row must keep the stable id qualityforge');
+          console.log('patch OK');
+          "

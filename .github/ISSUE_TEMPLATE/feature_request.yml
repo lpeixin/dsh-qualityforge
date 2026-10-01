@@ -1,0 +1,51 @@
+name: 功能建议 / 新增测试项
+description: 建议新能力，或补充某个测试域的测试方法
+title: '[Feature] '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        QualityForge 的核心资产是测试方法目录：**补充一个真实存在、可独立判定的测试项，
+        比新增一个工具更有价值**。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 建议类型
+      options:
+        - 新增测试项 / 测试方法（目录贡献）
+        - 新增或改进工具
+        - 报告结构与可读性
+        - 新的预设命令或自动判定能力
+        - 文档与示例
+        - 其它
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 它解决什么问题
+      description: 描述当前审计会漏掉什么，或用起来哪里别扭
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 具体建议
+      description: |
+        如果是新增测试项，请尽量给出：测试域、方法名、测试项标题、通过判据（expect）、
+        建议分层（blocker/core/extended/exhaustive）
+      placeholder: |
+        测试域：sec-input
+        方法：SEC-INPUT-INJECTION
+        标题：排序参数只接受白名单字段
+        判据：传入 orderBy=id;DROP TABLE 时返回 400，且数据库未执行任何 DDL
+        分层：core
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 备选方案
+    validations:
+      required: false

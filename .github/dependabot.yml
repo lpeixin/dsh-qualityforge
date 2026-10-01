@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # The plugin itself has no npm dependencies, so dependency updates only matter
+  # for the pinned GitHub Actions used by CI.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'ci'
+    labels:
+      - dependencies
